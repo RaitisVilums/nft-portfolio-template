@@ -1,0 +1,482 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ID BreakPoint */
+
+#home,
+#about {
+  width: 100%;
+  padding: 2rem;
+}
+:root {
+  /* Colors */
+
+  --White: hsl(0, 0%, 90%);
+  --Black-Trasnparent: hsl(0 0% 0% / 0.6);
+  --Blue: hsl(215, 73%, 84%);
+  --Green: hsl(87, 49%, 36%);
+  --Light-Green: hsl(85, 59%, 48%);
+  --Black: hsl(200, 8%, 15%);
+  --Gray: hsl(210, 10%, 29%);
+  --Light-Gray: hsl(204, 2%, 43%);
+
+  /* Font-Weights */
+
+  --Regular: 400;
+  --Regular-500: 500;
+  --Bold: 700;
+}
+
+/* Optional CSS */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, 3rem);
+}
+
+.grid {
+  display: grid;
+}
+.hidden {
+  display: none;
+}
+
+/* Overall HTML CSS */
+
+.primary {
+  width: 100%;
+  margin: auto;
+  background-color: var(--Gray);
+  overflow-x: hidden;
+}
+
+/* Navigation Bar -- Header -- Logo  */
+
+.primary__header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: var(--Black);
+  align-items: center;
+  justify-content: space-around;
+  z-index: 10000;
+}
+.logo {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+.mobile-nav-bar-toogle {
+  display: none;
+}
+.primary__nav-bar {
+  --gap: 2rem;
+  list-style: none;
+  align-items: center;
+  padding: 1rem;
+  margin: 0;
+}
+.primary__nav-bar a {
+  color: var(--White);
+  font-weight: var(--Bold);
+  padding: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.5s ease-out 100ms;
+}
+.primary__nav-bar a:hover {
+  color: var(--Light-Green);
+}
+
+.icons > a {
+  flex-direction: row;
+  align-content: center;
+  padding: 1rem;
+}
+.icons__link > img {
+  background-color: transparent;
+  margin-top: 10px;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: transform 0.4s;
+}
+.icons__link > img:hover {
+  transform: scale(2);
+}
+
+/* Navigation Bar -- Header -- Logo END */
+
+/* Main Body -- Text -- ect. */
+
+.secondary {
+  width: 1440px;
+  padding-top: 5em;
+  margin: 4em auto 6em auto;
+  grid-template-columns: repeat(2, minmax(1fr, auto));
+  grid-template-rows: auto;
+}
+
+.secondary__heading {
+  font-size: 3rem;
+  padding-top: 1em;
+  padding-bottom: 0.3em;
+  color: var(--Light-Green);
+}
+
+.secondary__paragraph {
+  font-size: 1.5rem;
+  font-weight: var(--Regular-500);
+  color: var(--Blue);
+  padding-right: 10em;
+  padding-bottom: 6em;
+  line-height: 1.5;
+}
+.secondary__paragraph > span {
+  color: var(--Light-Green);
+}
+.secondary__icons__link > img {
+  width: 2rem;
+  height: 2rem;
+  align-self: center;
+}
+.icons-scale {
+  transition: transform 0.5s;
+  justify-content: center;
+  align-items: center;
+}
+.icons-scale:hover {
+  transform: scale(2);
+}
+
+.secondary__section--1 {
+  width: 100%;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.secondary__section--2 {
+  width: 100%;
+  grid-column: 2;
+  grid-row: 1;
+}
+.secondary__section--2 > img {
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 0.5);
+}
+/* Main Body -- Text -- ect. END */
+
+/* Media __ Scroller */
+
+.media__scroller {
+  gap: 0.3rem;
+  grid-auto-flow: column;
+  grid-auto-columns: 10%;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+.media__scroller > div {
+  transform: translate3d(0, 0, 0);
+  animation: moveSlideshow 25s linear infinite alternate;
+  animation-delay: 2s;
+}
+
+.media__element {
+  padding: 0.5rem;
+  background: transparent;
+  border-radius: 5px;
+}
+.media__element > img {
+  inline-size: 100%;
+  border-radius: 5px;
+  aspect-ratio: 4 / 3;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 0.2);
+}
+@keyframes moveSlideshow {
+  100% {
+    transform: translateX(-500%);
+  }
+}
+
+/* Media __ Scroller END*/
+
+/* About section --- LAZYMINERSCLUB */
+
+.about {
+  max-width: 1440px;
+  margin: 5em auto 2em auto;
+  grid-template-columns: repeat(2, minmax(auto, 1fr));
+}
+.about__paragraphs {
+  padding: 2rem;
+  grid-column: 2;
+  grid-row: 1;
+}
+.about__paragraphs h1 {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+  color: var(--Light-Green);
+}
+.about__paragraphs h2 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  color: var(--Green);
+}
+.about__paragraphs p {
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  color: var(--Blue);
+  line-height: 1.5;
+}
+
+.about__image {
+  grid-column: 1;
+  grid-row: 1;
+}
+.about__image > img {
+  position: relative;
+  top: 25rem;
+  left: 10rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 0.5);
+}
+
+/* About section --- LAZYMINERSCLUB - END */
+
+/* RoadMap page  */
+
+#road--map {
+  font-size: 3rem;
+  text-align: center;
+  padding: 2em;
+  color: var(--Light-Green);
+}
+.road--map {
+  width: 1440px;
+  margin: 10em auto 2em auto;
+}
+
+.order {
+  font-size: 0;
+  width: 100vw;
+  padding: 250px 0;
+  transition: all 1s;
+}
+
+.order__list {
+  position: relative;
+  display: inline-block;
+  list-style-type: none;
+  width: 160px;
+  height: 3px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.order__list:last-child {
+  width: 280px;
+}
+
+.order__list:not(:first-child) {
+  margin-left: 14px;
+}
+
+.order__list:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 1px);
+  bottom: 0;
+  width: 12px;
+  height: 12px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: var(--Light-Green);
+}
+
+.order__list__block {
+  position: absolute;
+  left: calc(100% + 7px);
+  width: 280px;
+  padding: 15px;
+  font-size: 1rem;
+  white-space: normal;
+  background: var(--White);
+  box-shadow: 0 5px 10px rgb(0 0 0 / 0.5);
+}
+.order__list__block h1 {
+  font-size: 1.5rem;
+  color: var(--Light-Green);
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.order__list__block::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.order__list:nth-child(odd) .order__list__block {
+  top: -16px;
+  transform: translateY(-100%);
+}
+
+.order__list:nth-child(odd) .order__list__block::before {
+  top: 100%;
+  border-width: 8px 8px 0 0;
+  border-color: white transparent transparent transparent;
+}
+
+.order__list:nth-child(even) .order__list__block {
+  top: calc(100% + 16px);
+}
+
+.order__list:nth-child(even) .order__list__block::before {
+  top: -8px;
+  border-width: 8px 0 0 8px;
+  border-color: transparent transparent transparent white;
+}
+
+/* RoadMap page -- END */
+
+/* TEAM  */
+
+/* TEAM -- END */
+
+/* Footer */
+
+/* Media query for phones */
+
+@media (max-width: 35em) {
+  .primary {
+    max-width: 375px;
+    margin: 1rem auto 1rem auto;
+  }
+  .logo {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    width: 5rem;
+    height: 5rem;
+  }
+  .primary__nav-bar {
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 40%;
+    flex-direction: column;
+    padding: min(10vh, 3rem) 2em;
+    background: var(--Black-Trasnparent);
+    transform: translateX(100%);
+    transition: transform 400ms ease-in-out;
+  }
+  .primary__nav-bar[data-visible="true"] {
+    transform: translateX(0%);
+  }
+  @supports (backdrop-filter: blur(1rem)) {
+    .primary__nav-bar {
+      background: var(--Black-Trasnparent);
+    }
+  }
+  .mobile-nav-bar-toogle {
+    display: block;
+    position: fixed;
+    background-color: transparent;
+    background-image: url("/images/icon-hamburger.svg");
+    background-repeat: no-repeat;
+    width: 2rem;
+    border: 0;
+    aspect-ratio: 1;
+    z-index: 9999;
+    top: 2rem;
+    right: 2rem;
+  }
+  .mobile-nav-bar-toogle[aria-expanded="true"] {
+    background-image: url("/images/icon-close.svg");
+  }
+  .icons {
+    --gap: 0.5rem;
+  }
+
+  .secondary {
+    max-width: 350px;
+    height: 100%;
+    padding-top: 7em;
+    margin: 1rem auto 1rem auto;
+    text-align: center;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, minmax(1fr, auto));
+  }
+  .secondary__heading {
+    font-size: 2rem;
+    padding-top: 1em;
+    padding-bottom: 0.3em;
+    color: var(--Light-Green);
+  }
+
+  .secondary__paragraph {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0;
+    font-weight: var(--Regular-500);
+    color: var(--Blue);
+  }
+  .secondary__section--1 {
+    width: 100%;
+    padding-left: 0em;
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .secondary__section--2 {
+    width: 100%;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .secondary__section--2 > img {
+    border-radius: 10px;
+    width: 310px;
+    height: 310px;
+  }
+  .secondary__icons {
+    padding-top: 2em;
+    margin: 1rem auto 1rem auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .media__scroller {
+    text-align: center;
+    margin: 1rem auto 1rem auto;
+    padding-left: var(--re-size);
+    grid-auto-columns: 25%;
+  }
+  .media__scroller > div {
+    animation-delay: 2s;
+  }
+}
