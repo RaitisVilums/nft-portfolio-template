@@ -11,15 +11,17 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ID BreakPoint */
+/*  ------------ ID BreakPoint  ------------ */
 
 #home,
-#about {
+#about,
+#team,
+#faq {
   width: 100%;
   padding: 2rem;
 }
 :root {
-  /* Colors */
+  /*  ------------ Colors ------------  */
 
   --White: hsl(0, 0%, 90%);
   --Black-Trasnparent: hsl(0 0% 0% / 0.6);
@@ -30,14 +32,14 @@ html {
   --Gray: hsl(210, 10%, 29%);
   --Light-Gray: hsl(204, 2%, 43%);
 
-  /* Font-Weights */
+  /* ------------  Font-Weights  ------------ */
 
   --Regular: 400;
   --Regular-500: 500;
   --Bold: 700;
 }
 
-/* Optional CSS */
+/*  ------------ Optional CSS ------------  */
 
 .sr-only {
   position: absolute;
@@ -62,7 +64,7 @@ html {
   display: none;
 }
 
-/* Overall HTML CSS */
+/*  ------------ Overall HTML CSS ------------  */
 
 .primary {
   width: 100%;
@@ -71,7 +73,7 @@ html {
   overflow-x: hidden;
 }
 
-/* Navigation Bar -- Header -- Logo  */
+/* ------------  Navigation Bar -- Header -- Logo ------------   */
 
 .primary__header {
   width: 100%;
@@ -126,9 +128,9 @@ html {
   transform: scale(2);
 }
 
-/* Navigation Bar -- Header -- Logo END */
+/*  ------------ Navigation Bar -- Header -- Logo END  ------------ */
 
-/* Main Body -- Text -- ect. */
+/* ------------  Main Body -- Text -- ect. ------------  */
 
 .secondary {
   width: 1440px;
@@ -185,9 +187,9 @@ html {
   border-radius: 10px;
   box-shadow: 0 5px 10px rgb(0 0 0 / 0.5);
 }
-/* Main Body -- Text -- ect. END */
+/* ------------  Main Body -- Text -- ect. END ------------  */
 
-/* Media __ Scroller */
+/* ------------  Media __ Scroller ------------  */
 
 .media__scroller {
   gap: 0.3rem;
@@ -219,9 +221,9 @@ html {
   }
 }
 
-/* Media __ Scroller END*/
+/* ------------  Media __ Scroller END ------------ */
 
-/* About section --- LAZYMINERSCLUB */
+/* ------------  About section --- LAZYMINERSCLUB ------------  */
 
 .about {
   max-width: 1440px;
@@ -262,19 +264,18 @@ html {
   box-shadow: 0 5px 10px rgb(0 0 0 / 0.5);
 }
 
-/* About section --- LAZYMINERSCLUB - END */
+/*  ------------ About section --- LAZYMINERSCLUB - END ------------  */
 
-/* RoadMap page  */
+/*  ------------ RoadMap page  ------------  */
 
 #road--map {
   font-size: 3rem;
   text-align: center;
-  padding: 2em;
+  padding: 3em;
   color: var(--Light-Green);
 }
 
-/* TIMELINE
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* ------------  TIMELINE ------------  */
 
 button {
   background: transparent;
@@ -383,7 +384,7 @@ time {
   margin-bottom: 8px;
 }
 
-/* TIMELINE ARROWS */
+/*  ------------ TIMELINE ARROWS ------------  */
 
 .timeline .arrows {
   display: flex;
@@ -405,22 +406,91 @@ time {
   height: 45px;
 }
 
-/* Timeline -- END */
+/* ------------  Timeline -- END ------------  */
 
-/* TEAM  */
+/*  ------------ TEAM  ------------  */
 
-/* TEAM -- END */
+.team {
+  width: 1440px;
+  padding-top: 5em;
+  margin: 4em auto 6em auto;
+  text-align: center;
+  grid-template-columns: repeat(3, minmax(1fr, auto));
+  grid-template-rows: auto;
+}
+.team__heading {
+  margin: 2em auto auto auto;
+  text-align: center;
+  font-size: 3rem;
+  color: var(--Light-Green);
+}
 
-/* Footer */
+.team__member > img {
+  width: 300px;
+  height: 300px;
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
+  box-shadow: 0 5px 15px rgb(0 0 0 / 0.5);
+}
+.team__member:first-child {
+  grid-column: 1;
+  grid-row: 1;
+}
+.team__member:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+}
+.team__member:nth-child(3) {
+  grid-column: 3;
+  grid-row: 1;
+}
+.team__member:nth-child(4) {
+  grid-column: 1;
+  grid-row: 2;
+}
+.team__member:nth-child(5) {
+  grid-column: 2;
+  grid-row: 2;
+}
+.team__member:nth-child:last-child {
+  grid-column: 3;
+  grid-row: 2;
+}
+.team__text {
+  line-height: 1.5;
+  padding: 1rem 1rem 4rem 1rem;
+}
+.team__text > h1 {
+  color: var(--Light-Green);
+}
+.team__text > p {
+  color: var(--Blue);
+}
 
-/* MEADIA -- PHONES */
+/*  ------------ TEAM -- END  ------------ */
+
+/* ------------  Footer ------------  */
+
+/* ------------  MEADIA -- PHONES ------------  */
 @media (max-width: 35em) {
   #home,
-  #about {
+  #about,
+  #team,
+  #faq {
     width: 100%;
     padding: 1rem;
   }
-  /* HOME PAGE */
+
+  /* ------------  HOME PAGE ------------  */
+
   .primary {
     max-width: 375px;
     margin: 1rem auto 1rem auto;
@@ -527,9 +597,9 @@ time {
     animation-delay: 2s;
   }
 
-  /* HOME PAGE END */
+  /*  ------------ HOME PAGE END  ------------ */
 
-  /* ABOUT PAGE */
+  /* ------------  ABOUT PAGE ------------  */
   .about {
     max-width: 350px;
     height: 100%;
@@ -572,9 +642,10 @@ time {
     box-shadow: 0 5px 10px rgb(0 0 0 / 0.5);
   }
 
-  /* ABOUT PAGE END */
+  /*  ------------ ABOUT PAGE END ------------  */
 
-  /* ROADMAP */
+  /* ------------ ROADMAP ------------  */
+
   #road--map {
     font-size: 2rem;
     padding-bottom: -2em;
@@ -638,4 +709,58 @@ time {
   .timeline .arrows {
     display: none;
   }
+
+  /*  ------------ TEAM PAGE ------------  */
+
+  .team__heading {
+    font-size: 2rem;
+  }
+  .team {
+    max-width: 350px;
+    height: 100%;
+    padding-top: 1.5em;
+    margin: 1rem auto 1rem auto;
+    text-align: center;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, minmax(1fr, auto));
+  }
+  .team__text h1 {
+    font-size: 1.5rem;
+    padding-top: 1em;
+  }
+
+  .team__member:first-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .team__member:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .team__member:nth-child(3) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .team__member:nth-child(4) {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  .team__member:nth-child(5) {
+    grid-column: 1;
+    grid-row: 5;
+  }
+  .team__member:last-child {
+    grid-column: 1;
+    grid-row: 6;
+  }
+
+  /*  ------------ TEAM PAGE END ------------  */
+
+  /*  ------------ FAQ PAGE ------------  */
+
+  /*  ------------ FAQ PAGE END ------------  */
+
+  /*  ------------ FOOTER PAGE  ------------  */
+
+  /*  ------------ FOOTER PAGE END  ------------  */
 }
