@@ -399,8 +399,7 @@ time {
   margin-bottom: 8px;
 }
 
-/* TIMELINE ARROWS
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* TIMELINE ARROWS */
 
 .timeline .arrows {
   display: flex;
@@ -422,7 +421,7 @@ time {
   height: 45px;
 }
 
-/* RoadMap page -- END */
+/* Timeline -- END */
 
 /* TEAM  */
 
@@ -543,8 +542,29 @@ time {
   /* ABOUT PAGE */
   .about {
     max-width: 350px;
-    margin: 5em auto 2em auto;
-    grid-template-rows: repeat(2, minmax(auto, 1fr));
+    margin: 0 auto;
+    text-align: center;
+    grid-template-rows: repeat(5, minmax(auto, 1fr));
+    grid-template-columns: 1;
+  }
+  .phone__heading {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .about__paragraphs {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .about__image {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .about__image > img {
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 0.5);
   }
 
   /* ABOUT PAGE END */
