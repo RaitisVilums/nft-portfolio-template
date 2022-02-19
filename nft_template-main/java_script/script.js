@@ -1,4 +1,4 @@
-// NAV__BAR
+// ---------------------- NAV__BAR -------------------------
 
 const navigationBar = document.querySelector(" .primary__nav-bar");
 const toogleNavBar = document.querySelector(".mobile-nav-bar-toogle ");
@@ -15,7 +15,7 @@ toogleNavBar.addEventListener("click", () => {
   }
 });
 
-// ROAD__MAP
+// ------------------- ROAD__MAP --------------------
 
 (function () {
   // VARIABLES
@@ -126,3 +126,21 @@ toogleNavBar.addEventListener("click", () => {
     });
   }
 })();
+
+// ------------------- FAQ ----------------
+
+const items = document.querySelectorAll(".accordion button");
+
+function toggleAccordion() {
+  const itemToggle = this.getAttribute("aria-expanded");
+
+  for (i = 0; i < items.length; i++) {
+    items[i].setAttribute("aria-expanded", "false");
+  }
+
+  if (itemToggle == "false") {
+    this.setAttribute("aria-expanded", "true");
+  }
+}
+
+items.forEach((item) => item.addEventListener("click", toggleAccordion));
