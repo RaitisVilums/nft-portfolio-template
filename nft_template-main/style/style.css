@@ -794,7 +794,8 @@ time {
 
   #road--map {
     font-size: 2rem;
-    padding-bottom: -2em;
+    padding-top: -3em;
+    padding-bottom: -10em;
   }
   .timeline ol,
   .timeline ol li {
@@ -906,7 +907,8 @@ time {
   .container {
     max-width: 350px;
     height: 100%;
-    padding-top: 7em;
+    padding-top: 1em;
+    padding-bottom: 3em;
     margin: 1rem auto 1rem auto;
     text-align: center;
   }
@@ -917,6 +919,16 @@ time {
   /*  ------------ FAQ PAGE END ------------  */
 
   /*  ------------ FOOTER PAGE  ------------  */
+
+  .ending {
+    position: absolute;
+  }
+  .ending__content {
+    font-size: 1rem;
+    text-align: center;
+    margin: 2rem auto;
+    color: var(--White);
+  }
 
   /*  ------------ FOOTER PAGE END  ------------  */
 }
