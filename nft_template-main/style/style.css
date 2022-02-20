@@ -74,9 +74,7 @@ html {
 }
 
 /* ------------  Navigation Bar -- Header -- Logo ------------   */
-.logo-mobile{
-display:none;
-}
+
 .primary__header {
   width: 100%;
   position: fixed;
@@ -90,6 +88,9 @@ display:none;
   position: relative;
   width: 100px;
   height: 100px;
+}
+.logo-mobile {
+  display: none;
 }
 .mobile-nav-bar-toogle {
   display: none;
@@ -641,6 +642,7 @@ time {
     display: none;
   }
   .logo-mobile {
+    display: block;
     position: absolute;
     top: 0.5rem;
     left: 0.5rem;
