@@ -636,11 +636,14 @@ time {
     margin: 1rem auto 1rem auto;
   }
   .logo {
+    display: none;
+  }
+  .logo-mobile {
     position: absolute;
     top: 0.5rem;
     left: 0.5rem;
-    width: 5rem;
-    height: 5rem;
+    width: 8rem;
+    height: 8rem;
   }
   .primary__nav-bar {
     --gap: 2rem;
