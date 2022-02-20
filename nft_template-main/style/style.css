@@ -74,7 +74,9 @@ html {
 }
 
 /* ------------  Navigation Bar -- Header -- Logo ------------   */
-
+.logo-mobile{
+display:none;
+}
 .primary__header {
   width: 100%;
   position: fixed;
