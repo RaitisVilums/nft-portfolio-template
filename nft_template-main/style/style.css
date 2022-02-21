@@ -102,16 +102,16 @@ html {
   padding: 1rem;
   margin: 0;
 }
-.primary__nav-bar a {
+.primary__nav-bar-li a {
   color: var(--White);
   font-weight: var(--Bold);
   padding: 0.75rem 2rem 0.75rem 2rem;
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
-  transition: color 0.5s ease-out 100ms;
+  transition: color 0.5s ease-in-out 100ms;
 }
-.primary__nav-bar a:hover {
+.primary__nav-bar-li a:hover {
   color: var(--Light-Green);
 }
 
@@ -131,17 +131,21 @@ html {
   transform: scale(2);
 }
 .mint__btn {
+  padding: 10px 30px 10px 30px;
   margin-top: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: var(--Bold);
+  color: var(--White);
   border: 1px solid var(--Light-Green);
   border-radius: 5px;
   background-color: var(--Light-Green);
   box-shadow: 0 5px 10px rgb(0 0 0 / 0.4);
-  text-align: center;
-  transition: all 0.5s ease-out 100ms;
+
+  transition: all 500ms ease-in-out;
 }
 .mint__btn:hover {
   color: var(--Light-Green);
-  transition: all 0.5s ease-out 100ms;
   background-color: var(--White);
 }
 
@@ -201,6 +205,8 @@ html {
   grid-row: 1;
 }
 .secondary__section--2 > img {
+  width: 450px;
+  height: 450px;
   border-radius: 10px;
   box-shadow: 0 5px 10px rgb(0 0 0 / 0.5);
 }
@@ -267,7 +273,7 @@ html {
   font-size: 1rem;
   padding-bottom: 1rem;
   color: var(--Blue);
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
 .about__image {
@@ -276,8 +282,10 @@ html {
 }
 .about__image > img {
   position: relative;
-  top: 25rem;
-  left: 10rem;
+  width: 450px;
+  height: 450px;
+  top: 8rem;
+  left: 12rem;
   border-radius: 10px;
   box-shadow: 0 5px 10px rgb(0 0 0 / 0.5);
 }
@@ -292,8 +300,6 @@ html {
   padding: 2em;
   color: var(--Light-Green);
 }
-
-/* ------------  TIMELINE ------------  */
 
 button {
   background: transparent;
@@ -402,7 +408,7 @@ time {
   margin-bottom: 8px;
 }
 
-/*  ------------ TIMELINE ARROWS ------------  */
+/*  ------------ RoadMap ARROWS ------------  */
 
 .timeline .arrows {
   display: flex;
@@ -424,7 +430,7 @@ time {
   height: 45px;
 }
 
-/* ------------  Timeline -- END ------------  */
+/* ------------  RoadMap -- END ------------  */
 
 /*  ------------ TEAM  ------------  */
 
@@ -596,7 +602,7 @@ time {
 .accordion .accordion-content {
   color: var(--Blue);
   text-align: left;
-  margin-left: 2em;
+  margin-left: 4em;
   opacity: 0;
   max-height: 0;
   overflow: hidden;
@@ -605,8 +611,26 @@ time {
 }
 .accordion .accordion-content p {
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 500;
+  line-height: 1.5;
   margin: 2em 0;
+}
+
+.here_btn {
+  padding: 5px 40px 5px 40px;
+  margin-left: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--White);
+  background-color: var(--Light-Green);
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 0.2);
+  transition: all 500ms ease-in-out;
+}
+
+.here_btn:hover {
+  color: var(--Light-Green);
+  background-color: var(--White);
 }
 
 /*  ------------ FAQ -- END  ------------ */
@@ -622,7 +646,9 @@ time {
 
 /* ------------  Footer END------------  */
 
-/* ------------  MEADIA -- PHONES ------------  */
+/* ------------  MEDIA -- Responsive ------------  */
+
+/* ------------  MEDIA -- PHONES ------------  */
 @media (max-width: 35em) {
   #home,
   #about,
