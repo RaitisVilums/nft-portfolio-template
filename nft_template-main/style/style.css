@@ -437,7 +437,7 @@ time {
 .team {
   width: 1440px;
   padding-top: 5em;
-  margin: 4em auto 6em auto;
+  margin: 4em auto 4em auto;
   text-align: center;
   grid-template-columns: repeat(3, minmax(1fr, auto));
   grid-template-rows: auto;
