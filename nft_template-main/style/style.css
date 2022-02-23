@@ -11,6 +11,10 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+hr {
+  width: 375px;
+  border: 2px solid var(--White);
+}
 
 /*  ------------ ID BreakPoint  ------------ */
 
@@ -652,6 +656,10 @@ time {
   height: 7rem;
   background-color: var(--Black);
 }
+.ending__paragraph {
+  padding-top: 1em;
+  font-size: 1rem;
+}
 
 /* ------------  Footer END------------  */
 
@@ -910,7 +918,6 @@ time {
     max-width: 350px;
     height: 100%;
     padding-top: 1.5em;
-    padding-left: 0em;
     margin: 1rem auto 1rem auto;
     text-align: center;
     grid-template-columns: auto;
@@ -988,5 +995,4 @@ time {
 }
 
 @media (min-width: 35em) and (max-width: 55em) {
-  
 }
