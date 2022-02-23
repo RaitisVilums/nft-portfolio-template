@@ -130,6 +130,7 @@ html {
 .icons__link > img:hover {
   transform: scale(2);
 }
+
 .mint__btn {
   padding: 10px 30px 10px 30px;
   margin-top: 5px;
@@ -301,6 +302,10 @@ html {
   padding: 2em;
   color: var(--Light-Green);
 }
+span {
+  color: var(--Light-Green);
+  text-transform: uppercase;
+}
 
 button {
   background: transparent;
@@ -310,6 +315,8 @@ button {
 }
 time {
   color: var(--Light-Green);
+  text-transform: uppercase;
+  font-size: 2rem;
 }
 .timeline {
   padding-top: 4em;
@@ -910,10 +917,12 @@ time {
   }
   .team__text h1 {
     font-size: 1.5rem;
-    padding-top: 1em;
   }
   .team__text p {
-    padding-bottom: 1em;
+    padding-bottom: 0em;
+  }
+  .team__member {
+    margin-left: -25px;
   }
   .team__member:first-child {
     grid-column: 1;
