@@ -13,7 +13,8 @@ html {
 }
 hr {
   width: 375px;
-  border: 2px solid var(--White);
+  border: 0;
+  border-bottom: 2px solid var(--White);
 }
 
 /*  ------------ ID BreakPoint  ------------ */
@@ -73,7 +74,7 @@ hr {
 
 .primary {
   width: 100%;
-  margin: auto;
+  margin: auto 0;
   background-color: var(--Gray);
   overflow-x: hidden;
 }
@@ -160,7 +161,7 @@ hr {
 /* ------------  Main Body -- Text -- ect. ------------  */
 
 .secondary {
-  width: 1440px;
+  width: 1150px;
   padding-top: 5em;
   margin: 4em auto 6em auto;
   grid-template-columns: repeat(2, minmax(1fr, auto));
@@ -257,7 +258,7 @@ hr {
 /* ------------  About section --- LAZYMINERSCLUB ------------  */
 
 .about {
-  max-width: 1440px;
+  max-width: 1150px;
   margin: 5em auto 2em auto;
   grid-template-columns: repeat(2, minmax(auto, 1fr));
 }
@@ -291,8 +292,8 @@ hr {
   position: relative;
   width: 450px;
   height: 450px;
-  top: 10rem;
-  left: 12rem;
+  top: 11rem;
+  left: 6rem;
   border-radius: 10px;
   box-shadow: 0 5px 10px rgb(0 0 0 / 0.5);
 }
@@ -452,17 +453,17 @@ time {
 /*  ------------ TEAM  ------------  */
 
 .team {
-  width: 1440px;
+  max-width: 1150px;
   padding-top: 5em;
-  gap: 6rem;
+  gap: 3rem;
   margin: 4em auto 4em auto;
   text-align: center;
   grid-template-columns: repeat(3, minmax(1fr, auto));
   grid-template-rows: auto;
 }
 .team__member {
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
 }
 
 .team__heading {
@@ -517,7 +518,7 @@ time {
 /*  ------------ FAQ  ------------ */
 
 .container {
-  width: 1440px;
+  max-width: 1150px;
   margin: 4em auto 6em auto;
   text-align: center;
 }
@@ -656,9 +657,18 @@ time {
   height: 7rem;
   background-color: var(--Black);
 }
+.ending__content {
+  margin: 0 auto;
+  text-align: center;
+}
+.line {
+  width: 1150px;
+  padding-top: 2em;
+}
 .ending__paragraph {
+  color: var(--White);
   padding-top: 1em;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 /* ------------  Footer END------------  */
@@ -984,15 +994,542 @@ time {
   .ending {
     position: absolute;
   }
+  .line {
+    display: none;
+  }
   .ending__content {
     font-size: 1rem;
     text-align: center;
     margin: 2rem auto;
     color: var(--White);
   }
+  .ending__paragraph {
+    font-size: 1rem;
+  }
 
   /*  ------------ FOOTER PAGE END  ------------  */
 }
 
 @media (min-width: 35em) and (max-width: 55em) {
+  #home,
+  #about,
+  #team,
+  #faq {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  /* ------------  HOME PAGE ------------  */
+
+  .primary {
+    max-width: 550px;
+    margin: 1rem auto 1rem auto;
+  }
+  .logo {
+    display: none;
+  }
+  .logo-mobile {
+    display: block;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    width: 8rem;
+    height: 8rem;
+  }
+  .primary__nav-bar {
+    --gap: 2rem;
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 40%;
+    flex-direction: column;
+    padding: min(10vh, 3rem) 2em;
+    background: var(--Black-Trasnparent);
+    transform: translateX(100%);
+    transition: transform 400ms ease-in-out;
+  }
+  .primary__nav-bar[data-visible="true"] {
+    transform: translateX(0%);
+  }
+  @supports (backdrop-filter: blur(1rem)) {
+    .primary__nav-bar {
+      background: var(--Black-Trasnparent);
+    }
+  }
+  .mobile-nav-bar-toogle {
+    display: block;
+    position: fixed;
+    background-color: transparent;
+    background-image: url("/images/icon-hamburger.svg");
+    background-repeat: no-repeat;
+    width: 2rem;
+    border: 0;
+    aspect-ratio: 1;
+    z-index: 9999;
+    top: 2rem;
+    right: 2rem;
+  }
+  .mobile-nav-bar-toogle[aria-expanded="true"] {
+    background-image: url("/images/icon-close.svg");
+  }
+  .icons {
+    --gap: 0.3rem;
+    margin-top: -1rem;
+  }
+
+  .mint__btn {
+    margin-top: -1rem;
+  }
+  .secondary {
+    max-width: 525px;
+    height: 100%;
+    padding-top: 7em;
+    margin: 1rem auto 1rem auto;
+    text-align: center;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, minmax(1fr, auto));
+  }
+  .secondary__heading {
+    font-size: 2rem;
+    padding-top: 1em;
+    padding-bottom: 0.3em;
+    color: var(--Light-Green);
+  }
+
+  .secondary__paragraph {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0;
+    font-weight: var(--Regular-500);
+    color: var(--Blue);
+  }
+  .secondary__section--1 {
+    width: 100%;
+    padding-left: 0em;
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .secondary__section--2 {
+    width: 100%;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .secondary__section--2 > img {
+    border-radius: 10px;
+    width: 485px;
+    height: 485px;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 0.5);
+  }
+  .secondary__icons {
+    padding-top: 2em;
+    margin: 1rem auto 1rem auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .media__scroller {
+    text-align: center;
+    margin: 1rem auto 1rem auto;
+    padding-left: var(--re-size);
+    grid-auto-columns: 25%;
+  }
+  .media__scroller > div {
+    animation-delay: 2s;
+  }
+
+  /*  ------------ HOME PAGE END  ------------ */
+
+  /* ------------  ABOUT PAGE ------------  */
+  .about {
+    max-width: 525px;
+    height: 100%;
+    padding-top: 1.5em;
+    margin: 1rem auto 1rem auto;
+    text-align: center;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, minmax(1fr, auto));
+  }
+  .about__paragraphs {
+    width: 100%;
+    align-self: center;
+    padding: 0rem;
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .about__paragraphs h1 {
+    font-size: 2rem;
+    padding-bottom: 0.5em;
+    text-align: center;
+    color: var(--Light-Green);
+  }
+  .about__paragraphs h2 {
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+    color: var(--Green);
+  }
+  .about__image {
+    padding-bottom: 2em;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .about__image > img {
+    position: none;
+    top: 0;
+    left: 0;
+    width: 485px;
+    height: 485px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 0.5);
+  }
+
+  /*  ------------ ABOUT PAGE END ------------  */
+
+  /* ------------ ROADMAP ------------  */
+
+  #road--map {
+    font-size: 2rem;
+    padding-top: -3em;
+  }
+  .timeline {
+    margin-top: -4em;
+  }
+  .timeline ol,
+  .timeline ol li {
+    width: auto;
+  }
+
+  .timeline ol {
+    padding: 0;
+    transform: none !important;
+  }
+
+  .timeline ol li {
+    display: block;
+    height: auto;
+    background: transparent;
+  }
+
+  .timeline ol li:first-child {
+    margin-top: 25px;
+  }
+
+  .timeline ol li:not(:first-child) {
+    margin-left: auto;
+  }
+
+  .timeline ol li div {
+    width: 94%;
+    height: auto !important;
+    margin: 0 auto 25px;
+  }
+
+  .timeline ol li div {
+    position: static;
+  }
+
+  .timeline ol li:nth-child(odd) div {
+    transform: none;
+    border-radius: 10px;
+  }
+  .timeline ol li:nth-child(even) div {
+    border-radius: 10px;
+  }
+
+  .timeline ol li:nth-child(odd) div::before,
+  .timeline ol li:nth-child(even) div::before {
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    border: none;
+    border-left: 1px solid var(--Light-Green);
+    box-shadow: 0 5px 10px rgb(0 0 0 / 0.5);
+    height: 25px;
+  }
+
+  .timeline ol li:last-child,
+  .timeline ol li:nth-last-child(2) div::before,
+  .timeline ol li:not(:last-child)::after,
+  .timeline .arrows {
+    display: none;
+  }
+
+  /*  ------------ TEAM PAGE ------------  */
+
+  .team__heading {
+    font-size: 2rem;
+  }
+  .team {
+    max-width: 525px;
+    height: 100%;
+    padding-top: 1.5em;
+    margin: 1rem auto 1rem auto;
+    text-align: center;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, minmax(1fr, auto));
+  }
+  .team__text h1 {
+    font-size: 1.5rem;
+  }
+  .team__text p {
+    padding-bottom: 0em;
+  }
+  .team__member {
+    margin: 0 auto;
+  }
+  .team__member:first-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .team__member:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .team__member:nth-child(3) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .team__member:nth-child(4) {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  .team__member:nth-child(5) {
+    grid-column: 1;
+    grid-row: 5;
+  }
+  .team__member:last-child {
+    grid-column: 1;
+    grid-row: 6;
+  }
+
+  /*  ------------ TEAM PAGE END ------------  */
+
+  /*  ------------ FAQ PAGE ------------  */
+  .container {
+    max-width: 525px;
+    height: 100%;
+    padding-top: 1em;
+    padding-bottom: 3em;
+    margin: 1rem auto 1rem auto;
+    text-align: center;
+  }
+  .container h1 {
+    font-size: 2rem;
+  }
+
+  .here_btn {
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+  }
+
+  /*  ------------ FAQ PAGE END ------------  */
+
+  /*  ------------ FOOTER PAGE  ------------  */
+
+  .ending {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+  }
+  .line {
+    display: none;
+  }
+  .ending__content {
+    font-size: 1rem;
+    text-align: center;
+    margin: 2rem auto;
+    color: var(--White);
+  }
+  .ending__paragraph {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 55em) and (max-width: 75em) {
+  /*  ------------ Overall HTML CSS ------------  */
+
+  /*  ------------ Overall HTML CSS ------------  */
+
+  .primary {
+    width: 100%;
+    margin: auto 0;
+    background-color: var(--Gray);
+    overflow-x: hidden;
+  }
+
+  /* ------------  Navigation Bar -- Header -- Logo ------------   */
+
+  .primary__header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: var(--Black);
+    align-items: center;
+    justify-content: space-around;
+    z-index: 10000;
+  }
+  .logo {
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+  .logo-mobile {
+    display: none;
+  }
+  .mobile-nav-bar-toogle {
+    display: none;
+  }
+  .primary__nav-bar {
+    --gap: 0.2rem;
+    list-style: none;
+    align-items: center;
+    padding: 1rem;
+    margin: 0;
+  }
+  .primary__nav-bar-li a {
+    color: var(--White);
+    font-weight: var(--Bold);
+    padding: 0.75rem 2rem 0.75rem 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.5s ease-in-out 100ms;
+  }
+  .primary__nav-bar-li a:hover {
+    color: var(--Light-Green);
+  }
+
+  .icons__link > img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  /*  ------------ Navigation Bar -- Header -- Logo END  ------------ */
+
+  /* ------------  Main Body -- Text -- ect. ------------  */
+
+  .secondary {
+    width: 800px;
+    padding-top: 2em;
+    margin: 4em auto 6em auto;
+    grid-template-columns: repeat(2, minmax(1fr, auto));
+    grid-template-rows: auto;
+  }
+
+  .secondary__heading {
+    font-size: 2.5rem;
+    padding-top: 1em;
+    padding-bottom: 0.3em;
+    color: var(--Light-Green);
+  }
+
+  .secondary__paragraph {
+    font-size: 1rem;
+    padding-right: 8em;
+    padding-bottom: 4em;
+    line-height: 1.5;
+  }
+  .secondary__icons__link > img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .image_3d {
+    width: 375px;
+    height: 375px;
+  }
+
+  /* ------------  Main Body -- Text -- ect. END ------------  */
+
+  /* ------------  About section --- LAZYMINERSCLUB ------------  */
+
+  .about {
+    max-width: 800px;
+    margin: 5em auto 2em auto;
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
+  }
+  .about__paragraphs {
+    padding: 2rem;
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .about__paragraphs h1 {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    color: var(--Light-Green);
+  }
+  .about__paragraphs h2 {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    color: var(--Green);
+  }
+  .about__paragraphs p {
+    font-size: 1rem;
+    padding-bottom: 1rem;
+    color: var(--Blue);
+    line-height: 1.8;
+  }
+
+  .about__image {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .about__image > img {
+    position: relative;
+    width: 375px;
+    height: 375px;
+    top: 10rem;
+    left: 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 0.5);
+  }
+
+  /*  ------------ About section --- LAZYMINERSCLUB - END ------------  */
+
+  /*  ------------ TEAM  ------------  */
+
+  .team {
+    max-width: 800px;
+    padding-top: 0em;
+    row-gap: 6rem;
+    margin-left: 100px;
+    text-align: center;
+    grid-template-columns: repeat(3, minmax(1fr, auto));
+    grid-template-rows: auto;
+  }
+  .team__member {
+    width: 300px;
+    height: 300px;
+  }
+
+  .team__heading {
+    font-size: 3rem;
+  }
+
+  .resize_image {
+    width: 250px;
+    height: 250px;
+  }
+
+  /*  ------------ TEAM -- END  ------------ */
+
+  /*  ------------ FAQ  ------------ */
+
+  .container {
+    max-width: 800px;
+    margin: 4em auto 6em auto;
+    text-align: center;
+  }
+  .container h1 {
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 0.75em;
+    color: var(--Light-Green);
+  }
+
+  /*  ------------ FAQ -- END  ------------ */
+
+  /* ------------  Footer ------------  */
+
+  .ending__paragraph {
+    font-size: 1rem;
+  }
 }
