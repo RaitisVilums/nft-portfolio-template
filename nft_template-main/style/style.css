@@ -939,9 +939,6 @@ time {
   .team__text p {
     padding-bottom: 0em;
   }
-  .team__member {
-    margin-left: -25px;
-  }
   .team__member:first-child {
     grid-column: 1;
     grid-row: 1;
