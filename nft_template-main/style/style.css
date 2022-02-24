@@ -232,7 +232,7 @@ hr {
 .media__scroller > div {
   transform: translate3d(0, 0, 0);
   animation: moveSlideshow 25s linear infinite alternate;
-  animation-delay: 2s;
+  animation-delay: 3s;
 }
 
 .media__element {
@@ -802,7 +802,7 @@ time {
     grid-auto-columns: 25%;
   }
   .media__scroller > div {
-    animation-delay: 2s;
+    animation-delay: 3s;
   }
 
   /*  ------------ HOME PAGE END  ------------ */
