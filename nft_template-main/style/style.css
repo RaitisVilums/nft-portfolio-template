@@ -32,11 +32,11 @@ hr {
   --White: hsl(0, 0%, 90%);
   --Black-Trasnparent: hsl(0 0% 0% / 0.6);
   --Blue: hsl(147, 62%, 26%);
-  --Green: hsl(87, 49%, 36%);
+  --Green: hsl(147, 61%, 43%);
   --Light-Green: hsl(147, 61%, 43%);
   --Black: hsl(200, 8%, 15%);
-  --Gray: hsl(180, 0%, 55%);
-  --Light-Gray: hsl(204, 2%, 43%);
+  --Gray: rgb(189, 187, 187);
+  --Light-Gray: rgb(153, 151, 151);
 
   /* ------------  Font-Weights  ------------ */
 
@@ -970,7 +970,7 @@ time {
   .container {
     max-width: 350px;
     height: 100%;
-    padding-top: 1em;
+    padding-top: 2em;
     padding-bottom: 3em;
     margin: 1rem auto 1rem auto;
     text-align: center;
@@ -1268,7 +1268,7 @@ time {
     font-size: 1.5rem;
   }
   .team__text p {
-    padding-bottom: 0em;
+    padding-bottom: 1em;
   }
   .team__member {
     margin: 0 auto;
@@ -1304,7 +1304,7 @@ time {
   .container {
     max-width: 525px;
     height: 100%;
-    padding-top: 1em;
+    padding-top: 2em;
     padding-bottom: 3em;
     margin: 1rem auto 1rem auto;
     text-align: center;
