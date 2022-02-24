@@ -9,7 +9,6 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 hr {
   width: 375px;
@@ -36,7 +35,7 @@ hr {
   --Light-Green: hsl(147, 61%, 43%);
   --Black: hsl(200, 8%, 15%);
   --Gray: rgb(189, 187, 187);
-  --Light-Gray: rgb(172, 168, 168);
+  --Light-Gray: rgb(189, 184, 184);
 
   /* ------------  Font-Weights  ------------ */
 
@@ -677,6 +676,9 @@ time {
 
 /* ------------  MEDIA -- PHONES ------------  */
 @media (max-width: 35em) {
+  html {
+    overflow-x: hidden;
+  }
   #home,
   #about,
   #team,
@@ -1008,6 +1010,9 @@ time {
 }
 
 @media (min-width: 35em) and (max-width: 55em) {
+  html {
+    overflow-x: hidden;
+  }
   #home,
   #about,
   #team,
