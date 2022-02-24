@@ -972,7 +972,7 @@ time {
   .container {
     max-width: 350px;
     height: 100%;
-    padding-top: 4rem;
+    padding-top: 5rem;
     padding-bottom: 3em;
     margin: 1rem auto 1rem auto;
     text-align: center;
@@ -1243,7 +1243,7 @@ time {
     top: 100%;
     transform: translateX(-50%);
     border: none;
-    border-left: 1px solid var(--Light-Green);
+    border-left: 2px solid var(--Light-Green);
     box-shadow: 0 5px 10px rgb(0 0 0 / 0.5);
     height: 25px;
   }
@@ -1309,7 +1309,7 @@ time {
   .container {
     max-width: 525px;
     height: 100%;
-    padding-top: 4rem;
+    padding-top: 5rem;
     padding-bottom: 3em;
     margin: 1rem auto 1rem auto;
     text-align: center;
