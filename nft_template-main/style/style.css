@@ -361,10 +361,10 @@ time {
   content: "";
   position: absolute;
   top: 50%;
-  left: calc(100% + 2px);
+  left: calc(100% + 0px);
   bottom: 0;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   transform: translateY(-50%);
   border-radius: 50%;
   background: var(--Light-Green);
@@ -909,7 +909,7 @@ time {
     top: 100%;
     transform: translateX(-50%);
     border: none;
-    border-left: 1px solid var(--Light-Green);
+    border-left: 2px solid var(--Light-Green);
     box-shadow: 0 5px 10px rgb(0 0 0 / 0.5);
     height: 25px;
   }
@@ -972,7 +972,7 @@ time {
   .container {
     max-width: 350px;
     height: 100%;
-    padding-top: 2em;
+    padding-top: 4rem;
     padding-bottom: 3em;
     margin: 1rem auto 1rem auto;
     text-align: center;
@@ -1309,7 +1309,7 @@ time {
   .container {
     max-width: 525px;
     height: 100%;
-    padding-top: 2em;
+    padding-top: 4rem;
     padding-bottom: 3em;
     margin: 1rem auto 1rem auto;
     text-align: center;
