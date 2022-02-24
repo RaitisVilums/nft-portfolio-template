@@ -684,7 +684,7 @@ time {
   #team,
   #faq {
     width: 100%;
-    padding: 0.5rem;
+    padding: 1rem;
   }
 
   /* ------------  HOME PAGE ------------  */
@@ -1018,7 +1018,7 @@ time {
   #team,
   #faq {
     width: 100%;
-    padding: 0.5rem;
+    padding: 1rem;
   }
 
   /* ------------  HOME PAGE ------------  */
@@ -1243,7 +1243,6 @@ time {
     top: 100%;
     transform: translateX(-50%);
     border: none;
-    border-left: 2px solid var(--Light-Green);
     box-shadow: 0 5px 10px rgb(0 0 0 / 0.5);
     height: 25px;
   }
