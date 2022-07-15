@@ -231,7 +231,7 @@ hr {
 }
 .media__scroller > div {
   transform: translate3d(0, 0, 0);
-  animation: moveSlideshow 20s linear infinite alternate;
+  animation: moveSlideshow 10s linear infinite alternate;
   animation-delay: 3s;
 }
 
@@ -248,7 +248,7 @@ hr {
 }
 @keyframes moveSlideshow {
   100% {
-    transform: translateX(-200%);
+    transform: translateX(-100%);
   }
 }
 
