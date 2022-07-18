@@ -1,3 +1,3 @@
 # My first paid project.
-## I was given ready screenshots of the web
+## Design was given :D
 Results are here : https://template-vert.vercel.app/#home
